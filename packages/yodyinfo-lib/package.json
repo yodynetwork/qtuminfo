@@ -1,14 +1,14 @@
 {
   "name": "qtuminfo-lib",
   "version": "0.0.1",
-  "description": "A pure and powerful JavaScript QTUM library",
+  "description": "A pure and powerful JavaScript YODY library",
   "main": "lib/index.mjs",
   "keywords": [
     "qtum",
     "qtuminfo"
   ],
   "repository": "https://github.com/yodynetwork/qtuminfo/tree/master/qtuminfo-lib",
-  "author": "QTUM <foundation@qtum.org>",
+  "author": "YODY <foundation@qtum.org>",
   "license": "MIT",
   "dependencies": {
     "ethereumjs-abi": "^0.6.5",

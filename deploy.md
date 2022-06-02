@@ -85,7 +85,7 @@
 1. `git clone https://github.com/yodynetwork/qtuminfo.git && cd qtuminfo`
 2. `npm install` \
     You may modify `package.json` as follows:
-    * rewrite `script.build` to `"build": "QTUMINFO_API_BASE_CLIENT=/api/ QTUMINFO_API_BASE_SERVER=http://localhost:3001/qtuminfo-api/ QTUMINFO_API_BASE_WS=//example.com/ws/ nuxt build"` in `package.json` to set the api URL base
+    * rewrite `script.build` to `"build": "YODYINFO_API_BASE_CLIENT=/api/ YODYINFO_API_BASE_SERVER=http://localhost:3001/qtuminfo-api/ YODYINFO_API_BASE_WS=//example.com/ws/ nuxt build"` in `package.json` to set the api URL base
     * rewrite `script.start` to `"start": "PORT=12345 nuxt start"` to frontend on port 12345
 3. `npm run build`
 4. `npm start`

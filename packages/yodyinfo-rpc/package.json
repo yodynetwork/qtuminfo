@@ -8,6 +8,6 @@
     "qtuminfo"
   ],
   "repository": "https://github.com/yodynetwork/qtuminfo/tree/master/packages/qtuminfo-rpc.git",
-  "author": "QTUM <foundation@qtum.org>",
+  "author": "YODY <foundation@qtum.org>",
   "license": "MIT"
 }
