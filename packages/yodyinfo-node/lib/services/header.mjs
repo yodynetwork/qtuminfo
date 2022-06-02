@@ -1,5 +1,5 @@
 import assert from 'assert'
-import {Header as RawHeader} from 'qtuminfo-lib'
+import {Header as RawHeader} from 'yodyinfo-lib'
 import Header from '../models/header'
 import Service from './base'
 import {AsyncQueue} from '../utils'

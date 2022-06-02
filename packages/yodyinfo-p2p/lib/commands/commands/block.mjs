@@ -1,4 +1,4 @@
-import {Block} from 'qtuminfo-lib'
+import {Block} from 'yodyinfo-lib'
 import Message from './message'
 
 export default class BlockMessage extends Message {

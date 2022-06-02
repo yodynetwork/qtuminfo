@@ -1,5 +1,5 @@
 import util from 'util'
-import opcodes from 'qtum-opcodes'
+import opcodes from 'yody-opcodes'
 
 let map = opcodes
 let reverseMap = []

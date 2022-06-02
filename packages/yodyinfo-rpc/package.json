@@ -1,13 +1,13 @@
 {
-  "name": "qtuminfo-rpc",
+  "name": "yodyinfo-rpc",
   "version": "0.0.1",
   "description": "Yody Client Library to connect to Yody Core via RPC",
   "main": "index.mjs",
   "keywords": [
-    "qtum",
-    "qtuminfo"
+    "yody",
+    "yodyinfo"
   ],
-  "repository": "https://github.com/yodynetwork/qtuminfo/tree/master/packages/qtuminfo-rpc.git",
-  "author": "YODY <foundation@qtum.org>",
+  "repository": "https://github.com/yodynetwork/yodyinfo/tree/master/packages/yodyinfo-rpc.git",
+  "author": "YODY <foundation@yody.org>",
   "license": "MIT"
 }

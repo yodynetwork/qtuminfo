@@ -1,7 +1,7 @@
 import assert from 'assert'
 import EventEmitter from 'events'
 import Bus from './bus'
-import {Chain} from 'qtuminfo-lib'
+import {Chain} from 'yodyinfo-lib'
 import Logger from './logger'
 
 export default class Node extends EventEmitter {

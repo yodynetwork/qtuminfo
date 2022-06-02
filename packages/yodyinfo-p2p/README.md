@@ -1,1 +1,1 @@
-# qtuminfo-p2p
+# yodyinfo-p2p

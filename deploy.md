@@ -1,42 +1,42 @@
-# How to deploy qtuminfo and qtuminfo-ui
+# How to deploy yodyinfo and yodyinfo-ui
 
 ## Prerequisites
 * node.js v10.5+
 * mongodb v4.0+
 
-## Deploy qtum core
-1. `git clone --recursive https://github.com/yodynetwork/qtum.git --branch=qtuminfo`
-2. Follow the instructions [https://github.com/yodynetwork/qtum#building-qtum-core]() to build qtum
-3. Run `qtumd` with `-logevents=1` enabled
+## Deploy yody core
+1. `git clone --recursive https://github.com/yodynetwork/yody.git --branch=yodyinfo`
+2. Follow the instructions [https://github.com/yodynetwork/yody#building-yody-core]() to build yody
+3. Run `yodyd` with `-logevents=1` enabled
 
-## Deploy qtuminfo
-1. `git clone https://github.com/yodynetwork/qtuminfo.git && cd qtuminfo`
+## Deploy yodyinfo
+1. `git clone https://github.com/yodynetwork/yodyinfo.git && cd yodyinfo`
 2. `npm install`
-3. `mkdir packages/explorer` (you may change the directory name) and write files `package.json` and `qtuminfo-node.json` to it
+3. `mkdir packages/explorer` (you may change the directory name) and write files `package.json` and `yodyinfo-node.json` to it
     ```json
     // package.json
     {
         "name": "explorer-mainnet",
         "private": true,
         "scripts": {
-            "start": "qtuminfo-node start"
+            "start": "yodyinfo-node start"
         },
         "dependencies": {
-            "qtuminfo-api": "^0.0.1",
-            "qtuminfo-node": "^0.0.1",
-            "qtuminfo-ws": "^0.0.1"
+            "yodyinfo-api": "^0.0.1",
+            "yodyinfo-node": "^0.0.1",
+            "yodyinfo-ws": "^0.0.1"
         }
     }
     ```
     ```json
-    // qtuminfo-node.json
+    // yodyinfo-node.json
     {
         "chain": "mainnet",
         "port": 3001,
-        "datadir": "/absolute/path/to/qtuminfo/packages/explorer/data",
+        "datadir": "/absolute/path/to/yodyinfo/packages/explorer/data",
         "services": [
-            "qtuminfo-api",
-            "qtuminfo-ws",
+            "yodyinfo-api",
+            "yodyinfo-ws",
             "address",
             "balance",
             "block",
@@ -52,7 +52,7 @@
             "db": {
             "mongodb": {
                 "url": "mongodb://localhost:27017/",
-                "database": "qtuminfo-mainnet"
+                "database": "yodyinfo-mainnet"
             },
             "rpc": {
                 "protocol": "http",
@@ -72,7 +72,7 @@
                 }
             ]
             },
-            "qtuminfo-ws": {
+            "yodyinfo-ws": {
                 "port": 3002
             }
         }
@@ -81,11 +81,11 @@
 4. `npm run lerna bootstrap`
 5. run `npm start` in `packages/explorer` directory
 
-## Deploy qtuminfo-ui
-1. `git clone https://github.com/yodynetwork/qtuminfo.git && cd qtuminfo`
+## Deploy yodyinfo-ui
+1. `git clone https://github.com/yodynetwork/yodyinfo.git && cd yodyinfo`
 2. `npm install` \
     You may modify `package.json` as follows:
-    * rewrite `script.build` to `"build": "YODYINFO_API_BASE_CLIENT=/api/ YODYINFO_API_BASE_SERVER=http://localhost:3001/qtuminfo-api/ YODYINFO_API_BASE_WS=//example.com/ws/ nuxt build"` in `package.json` to set the api URL base
+    * rewrite `script.build` to `"build": "YODYINFO_API_BASE_CLIENT=/api/ YODYINFO_API_BASE_SERVER=http://localhost:3001/yodyinfo-api/ YODYINFO_API_BASE_WS=//example.com/ws/ nuxt build"` in `package.json` to set the api URL base
     * rewrite `script.start` to `"start": "PORT=12345 nuxt start"` to frontend on port 12345
 3. `npm run build`
 4. `npm start`

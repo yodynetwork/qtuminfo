@@ -1,6 +1,6 @@
-import {Address} from 'qtuminfo-lib'
+import {Address} from 'yodyinfo-lib'
 import TransactionOutput from '../models/transaction-output'
-import YodyBalanceChanges from '../models/qtum-balance-changes'
+import YodyBalanceChanges from '../models/yody-balance-changes'
 import AddressInfo from '../models/address-info'
 import Service from './base'
 import {toBigInt, BigInttoLong} from '../utils'

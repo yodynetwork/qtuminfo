@@ -1,10 +1,10 @@
-# [qtum.info](htts://qtum.info/) API
+# [yody.info](htts://yody.info/) API
 
-API endpoint of [qtum.info](https://qtum.info) is https://qtum.info/api/
+API endpoint of [yody.info](https://yody.info) is https://yody.info/api/
 
 
 ## Table of Contents
-- [qtum.info API](#qtuminfo-api)
+- [yody.info API](#yodyinfo-api)
   - [Table of Contents](#table-of-contents)
   - [Blocks](#blocks)
     - [Block information](#block-information)

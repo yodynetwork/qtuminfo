@@ -1,15 +1,15 @@
 {
-  "name": "qtuminfo-node",
+  "name": "yodyinfo-node",
   "version": "0.0.1",
   "bin": {
-    "qtuminfo-node": "./bin/qtuminfo-node.js"
+    "yodyinfo-node": "./bin/yodyinfo-node.js"
   },
-  "repository": "https://github.com/yodynetwork/qtuminfo/tree/master/qtuminfo-node",
+  "repository": "https://github.com/yodynetwork/yodyinfo/tree/master/yodyinfo-node",
   "keywords": [
-    "qtum",
-    "qtuminfo"
+    "yody",
+    "yodyinfo"
   ],
-  "author": "YODY <foundation@qtum.org>",
+  "author": "YODY <foundation@yody.org>",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.3.1",
@@ -22,9 +22,9 @@
     "lru-cache": "^4.1.3",
     "mongoose": "~5.2.18",
     "mongoose-long": "^0.2.1",
-    "qtuminfo-lib": "^0.0.1",
-    "qtuminfo-p2p": "^0.0.1",
-    "qtuminfo-rpc": "^0.0.1",
+    "yodyinfo-lib": "^0.0.1",
+    "yodyinfo-p2p": "^0.0.1",
+    "yodyinfo-rpc": "^0.0.1",
     "socket.io": "^2.1.1"
   }
 }

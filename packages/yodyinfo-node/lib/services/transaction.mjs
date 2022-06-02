@@ -1,7 +1,7 @@
-import {Address, Script, Input, Output, Transaction as RawTransaction} from 'qtuminfo-lib'
+import {Address, Script, Input, Output, Transaction as RawTransaction} from 'yodyinfo-lib'
 import Transaction from '../models/transaction'
 import TransactionOutput from '../models/transaction-output'
-import YodyBalanceChanges from '../models/qtum-balance-changes'
+import YodyBalanceChanges from '../models/yody-balance-changes'
 import Service from './base'
 import {toBigInt, BigInttoLong} from '../utils'
 
@@ -122,7 +122,7 @@ export default class TransactionService extends Service {
       },
       {
         $lookup: {
-          from: 'qtumbalancechanges',
+          from: 'yodybalancechanges',
           localField: 'id',
           foreignField: 'id',
           as: 'balanceChanges'

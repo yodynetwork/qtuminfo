@@ -1,7 +1,7 @@
 import fs from 'fs'
 import mongoose from 'mongoose'
-import {Header as RawHeader} from 'qtuminfo-lib'
-import Rpc from 'qtuminfo-rpc'
+import {Header as RawHeader} from 'yodyinfo-lib'
+import Rpc from 'yodyinfo-rpc'
 import Tip from '../models/tip'
 import Service from './base'
 

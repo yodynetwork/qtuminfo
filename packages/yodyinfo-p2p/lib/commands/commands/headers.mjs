@@ -1,4 +1,4 @@
-import {BufferReader, BufferWriter, Header} from 'qtuminfo-lib'
+import {BufferReader, BufferWriter, Header} from 'yodyinfo-lib'
 import Message from './message'
 
 export default class HeadersMessage extends Message {

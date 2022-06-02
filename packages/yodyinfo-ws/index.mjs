@@ -1,6 +1,6 @@
 import WebSocket from 'ws'
-import {Transaction, Address} from 'qtuminfo-lib'
-import Service from 'qtuminfo-node/lib/services/base'
+import {Transaction, Address} from 'yodyinfo-lib'
+import Service from 'yodyinfo-node/lib/services/base'
 
 export default class YodyinfoWebsocketService extends Service {
   constructor(options) {
@@ -17,7 +17,7 @@ export default class YodyinfoWebsocketService extends Service {
   }
 
   async start() {
-    this._bus = this.node.openBus({remoteAddress: 'localhost-qtuminfo-ws'})
+    this._bus = this.node.openBus({remoteAddress: 'localhost-yodyinfo-ws'})
     this._bus.on('block/block', this._blockEventHandler.bind(this))
     this._bus.subscribe('block/block')
     this._bus.on('block/transaction', this._transactionEventHandler.bind(this))

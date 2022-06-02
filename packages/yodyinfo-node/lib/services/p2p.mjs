@@ -1,5 +1,5 @@
 import LRU from 'lru-cache'
-import {Pool, Messages, Inventory} from 'qtuminfo-p2p'
+import {Pool, Messages, Inventory} from 'yodyinfo-p2p'
 import Service from './base'
 
 export default class P2PService extends Service {

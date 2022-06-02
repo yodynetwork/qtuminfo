@@ -1,4 +1,4 @@
-import {BufferReader} from 'qtuminfo-lib'
+import {BufferReader} from 'yodyinfo-lib'
 import Message from './message'
 import {getNonce} from './utils'
 

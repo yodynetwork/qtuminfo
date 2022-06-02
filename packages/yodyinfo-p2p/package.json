@@ -1,16 +1,16 @@
 {
-  "name": "qtuminfo-p2p",
+  "name": "yodyinfo-p2p",
   "version": "0.0.1",
-  "description": "Interface to the qtum P2P network for qtuminfo",
+  "description": "Interface to the yody P2P network for yodyinfo",
   "main": "lib/index.mjs",
   "keywords": [
-    "qtum",
-    "qtuminfo"
+    "yody",
+    "yodyinfo"
   ],
-  "repository": "https://github.com/yodynetwork/qtuminfo/tree/master/packages/qtuminfo-p2p.git",
-  "author": "YODY <foundation@qtum.org>",
+  "repository": "https://github.com/yodynetwork/yodyinfo/tree/master/packages/yodyinfo-p2p.git",
+  "author": "YODY <foundation@yody.org>",
   "license": "MIT",
   "dependencies": {
-    "qtuminfo-lib": "^0.0.1"
+    "yodyinfo-lib": "^0.0.1"
   }
 }

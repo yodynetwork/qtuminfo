@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import {Header as RawHeader} from 'qtuminfo-lib'
+import {Header as RawHeader} from 'yodyinfo-lib'
 
 const headerSchema = new mongoose.Schema({
   hash: {

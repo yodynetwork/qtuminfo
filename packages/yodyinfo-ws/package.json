@@ -1,18 +1,18 @@
 {
-  "name": "qtuminfo-ws",
+  "name": "yodyinfo-ws",
   "version": "0.0.1",
   "description": "A YODY blockchain REST and websocket API service for Yodyinfo Node",
   "main": "index.js",
-  "repository": "https://github.com/yodynetwork/qtuminfo/tree/master/packages/qtuminfo-rpc.git",
+  "repository": "https://github.com/yodynetwork/yodyinfo/tree/master/packages/yodyinfo-rpc.git",
   "keywords": [
-    "qtum",
-    "qtuminfo"
+    "yody",
+    "yodyinfo"
   ],
-  "author": "YODY <foundation@qtum.org>",
+  "author": "YODY <foundation@yody.org>",
   "license": "MIT",
   "dependencies": {
-    "qtuminfo-lib": "^0.0.1",
-    "qtuminfo-node": "^0.0.1",
+    "yodyinfo-lib": "^0.0.1",
+    "yodyinfo-node": "^0.0.1",
     "ws": "^6.0.0"
   }
 }

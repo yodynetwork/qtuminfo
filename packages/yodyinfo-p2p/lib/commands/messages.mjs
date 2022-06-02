@@ -1,4 +1,4 @@
-import {Hash} from 'qtuminfo-lib'
+import {Hash} from 'yodyinfo-lib'
 import {messageMap} from './commands'
 import Inventory from './inventory'
 

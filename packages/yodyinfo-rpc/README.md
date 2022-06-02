@@ -1,1 +1,1 @@
-# qtuminfo-rpc
+# yodyinfo-rpc

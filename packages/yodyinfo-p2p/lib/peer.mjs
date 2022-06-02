@@ -1,6 +1,6 @@
 import EventEmitter from 'events'
 import {Socket} from 'net'
-import {BufferReader} from 'qtuminfo-lib'
+import {BufferReader} from 'yodyinfo-lib'
 import Messages from './commands/messages'
 
 const MAX_RECEIVE_BUFFER = 10000000

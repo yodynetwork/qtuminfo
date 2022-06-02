@@ -1,8 +1,8 @@
-import {Address, Script, Solidity} from 'qtuminfo-lib'
+import {Address, Script, Solidity} from 'yodyinfo-lib'
 import Block from '../models/block'
 import Transaction from '../models/transaction'
 import TransactionOutput from '../models/transaction-output'
-import YodyBalanceChanges from '../models/qtum-balance-changes'
+import YodyBalanceChanges from '../models/yody-balance-changes'
 import Service from './base'
 import {toBigInt} from '../utils'
 

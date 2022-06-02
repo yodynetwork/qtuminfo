@@ -1,4 +1,4 @@
-import {BufferReader, BufferWriter} from 'qtuminfo-lib'
+import {BufferReader, BufferWriter} from 'yodyinfo-lib'
 
 const types = {
   ERROR: 0,

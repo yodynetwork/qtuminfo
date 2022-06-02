@@ -1,9 +1,9 @@
-import {Address} from 'qtuminfo-lib'
+import {Address} from 'yodyinfo-lib'
 import Transaction from '../models/transaction'
 import TransactionOutput from '../models/transaction-output'
 import Service from './base'
 import {toBigInt} from '../utils'
-import YodyBalanceChanges from '../models/qtum-balance-changes'
+import YodyBalanceChanges from '../models/yody-balance-changes'
 
 export default class MempoolService extends Service {
   constructor(options) {

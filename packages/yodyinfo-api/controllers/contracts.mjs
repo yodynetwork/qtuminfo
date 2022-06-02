@@ -1,4 +1,4 @@
-import {Address} from 'qtuminfo-lib'
+import {Address} from 'yodyinfo-lib'
 
 export default class ContractsController {
   constructor(node) {

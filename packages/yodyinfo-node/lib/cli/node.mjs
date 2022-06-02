@@ -17,7 +17,7 @@ export default class YodyNode {
     let services = await this.setupServices()
     this.node = new Node({
       ...this.config,
-      path: path.resolve(this.path, 'qtuminfo-node.json'),
+      path: path.resolve(this.path, 'yodyinfo-node.json'),
       services
     })
     this.registerExitHandlers()

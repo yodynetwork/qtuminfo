@@ -1,5 +1,5 @@
 import assert from 'assert'
-import {BufferWriter, Hash} from 'qtuminfo-lib'
+import {BufferWriter, Hash} from 'yodyinfo-lib'
 
 export default class Message {
   constructor(command, options) {

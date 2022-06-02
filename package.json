@@ -1,5 +1,5 @@
 {
-  "name": "qtuminfo",
+  "name": "yodyinfo",
   "private": true,
   "version": "0.0.1",
   "description": "",
@@ -9,19 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yodynetwork/qtuminfo.git"
+    "url": "git+https://github.com/yodynetwork/yodyinfo.git"
   },
   "keywords": [
-    "qtum",
-    "qtuminfo",
-    "qtum explorer"
+    "yody",
+    "yodyinfo",
+    "yody explorer"
   ],
-  "author": "YODY <foundation@qtum.org>",
+  "author": "YODY <foundation@yody.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yodynetwork/qtuminfo/issues"
+    "url": "https://github.com/yodynetwork/yodyinfo/issues"
   },
-  "homepage": "https://github.com/yodynetwork/qtuminfo#readme",
+  "homepage": "https://github.com/yodynetwork/yodyinfo#readme",
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "eslint": "^4.19.1",

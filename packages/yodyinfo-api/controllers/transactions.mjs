@@ -1,4 +1,4 @@
-import {Transaction, Address} from 'qtuminfo-lib'
+import {Transaction, Address} from 'yodyinfo-lib'
 
 export default class TransactionsController {
   constructor(node) {

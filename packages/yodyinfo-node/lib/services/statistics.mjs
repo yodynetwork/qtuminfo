@@ -1,4 +1,4 @@
-import {Address} from 'qtuminfo-lib'
+import {Address} from 'yodyinfo-lib'
 import AddressInfo from '../models/address-info'
 import Block from '../models/block'
 import Header from '../models/header'

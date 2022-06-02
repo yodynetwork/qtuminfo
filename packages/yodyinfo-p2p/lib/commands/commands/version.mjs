@@ -1,4 +1,4 @@
-import {BufferReader, BufferWriter} from 'qtuminfo-lib'
+import {BufferReader, BufferWriter} from 'yodyinfo-lib'
 import Message from './message'
 import {getNonce, parseAddress, writeAddress} from './utils'
 import packageInfo from '../../../package.json'
@@ -8,7 +8,7 @@ export default class VersionMessage extends Message {
     services = 13n,
     nonce = getNonce(),
     timestamp = Math.floor(Date.now() / 1000),
-    subversion = `/qtuminfo:${packageInfo.version}/`,
+    subversion = `/yodyinfo:${packageInfo.version}/`,
     startHeight = 0,
     relay = true,
     ...options

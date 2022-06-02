@@ -12,7 +12,7 @@ const blockSchema = new mongoose.Schema({
   timestamp: Number
 }, {_id: false})
 
-const qtumBalanceChangesSchema = new mongoose.Schema({
+const yodyBalanceChangesSchema = new mongoose.Schema({
   id: {
     type: String,
     index: true,
@@ -32,6 +32,6 @@ const qtumBalanceChangesSchema = new mongoose.Schema({
   }
 })
 
-qtumBalanceChangesSchema.index({address: 1, 'block.height': 1, index: 1})
+yodyBalanceChangesSchema.index({address: 1, 'block.height': 1, index: 1})
 
-export default mongoose.model('YodyBalanceChanges', qtumBalanceChangesSchema)
+export default mongoose.model('YodyBalanceChanges', yodyBalanceChangesSchema)

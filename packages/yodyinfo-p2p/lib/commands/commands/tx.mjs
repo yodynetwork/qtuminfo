@@ -1,4 +1,4 @@
-import {Transaction} from 'qtuminfo-lib'
+import {Transaction} from 'yodyinfo-lib'
 import Message from './message'
 
 export default class TxMessage extends Message {
