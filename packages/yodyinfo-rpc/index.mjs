@@ -46,11 +46,11 @@ export default class RpcClient {
         res.on('data', data => buffer.push(data))
         res.on('end', () => {
           if (res.statusCode === 401) {
-            reject(new Error(`Qtum JSON-RPC: Connection Rejected: 401 Unauthorized`))
+            reject(new Error(`Yody JSON-RPC: Connection Rejected: 401 Unauthorized`))
           } else if (res.statusCode === 403) {
-            reject(new Error(`Qtum JSON-RPC: Connection Rejected: 403 Forbidden`))
+            reject(new Error(`Yody JSON-RPC: Connection Rejected: 403 Forbidden`))
           } else if (res.statusCode === 500 && buffer === 'Work queue depth exceeded') {
-            let exceededError = new Error(`Qtum JSON-RPC: ${buffer}`)
+            let exceededError = new Error(`Yody JSON-RPC: ${buffer}`)
             exceededError.code = 429
             reject(exceededError)
           } else {
@@ -73,12 +73,12 @@ export default class RpcClient {
               this.log.error(err.stack)
               this.log.error(buffer)
               this.log.error(`HTTP Status code: ${res.statusCode}`)
-              reject(new Error(`Qtum JSON-RPC: Error Parsing JSON: ${err.message}`))
+              reject(new Error(`Yody JSON-RPC: Error Parsing JSON: ${err.message}`))
             }
           }
         })
       })
-      req.on('error', err => reject(new Error(`Qtum JSON-RPC: Request Error: ${err.message}`)))
+      req.on('error', err => reject(new Error(`Yody JSON-RPC: Request Error: ${err.message}`)))
       req.setHeader('Content-Length', request.length)
       req.setHeader('Content-Type', 'application/json')
       req.setHeader('Authorization', `Basic ${auth}`)

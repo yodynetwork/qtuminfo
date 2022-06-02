@@ -34,4 +34,4 @@ const qtumBalanceChangesSchema = new mongoose.Schema({
 
 qtumBalanceChangesSchema.index({address: 1, 'block.height': 1, index: 1})
 
-export default mongoose.model('QtumBalanceChanges', qtumBalanceChangesSchema)
+export default mongoose.model('YodyBalanceChanges', qtumBalanceChangesSchema)

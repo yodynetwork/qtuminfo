@@ -1,7 +1,7 @@
 import path from 'path'
 import Node from '../node'
 
-export default class QtumNode {
+export default class YodyNode {
   constructor(options) {
     this.path = options.path
     this.config = options.config
@@ -21,7 +21,7 @@ export default class QtumNode {
       services
     })
     this.registerExitHandlers()
-    this.node.on('ready', () => this.logger.info('Qtuminfo Node ready.'))
+    this.node.on('ready', () => this.logger.info('Yodyinfo Node ready.'))
     this.node.on('error', err => this.logger.error(err))
     this.node.start().catch(err => {
       this.logger.error('Failed to start services')

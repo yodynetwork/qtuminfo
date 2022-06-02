@@ -1,7 +1,7 @@
 import {Address, Script, Input, Output, Transaction as RawTransaction} from 'qtuminfo-lib'
 import Transaction from '../models/transaction'
 import TransactionOutput from '../models/transaction-output'
-import QtumBalanceChanges from '../models/qtum-balance-changes'
+import YodyBalanceChanges from '../models/qtum-balance-changes'
 import Service from './base'
 import {toBigInt, BigInttoLong} from '../utils'
 
@@ -511,7 +511,7 @@ export default class TransactionService extends Service {
         }
       }
     ])
-    await QtumBalanceChanges.deleteMany({'block.height': {$gt: this._tip.height}})
+    await YodyBalanceChanges.deleteMany({'block.height': {$gt: this._tip.height}})
     await this.node.updateServiceTip(this.name, this._tip)
   }
 
@@ -550,7 +550,7 @@ export default class TransactionService extends Service {
         }
       }
     ])
-    await QtumBalanceChanges.bulkWrite([
+    await YodyBalanceChanges.bulkWrite([
       {deleteMany: {filter: {id: {$in: outputTransactionIds}}}},
       {
         updateMany: {
@@ -576,7 +576,7 @@ export default class TransactionService extends Service {
   async _processTransaction(tx, indexInBlock, block) {
     let resultTransaction = await Transaction.findOne({id: tx.id})
     if (resultTransaction) {
-      await QtumBalanceChanges.updateMany(
+      await YodyBalanceChanges.updateMany(
         {id: tx.id},
         {
           block: {
@@ -686,7 +686,7 @@ export default class TransactionService extends Service {
           relatedAddresses.push(item.address)
         }
       }
-      await QtumBalanceChanges.collection.insertMany(balanceChanges, {ordered: false})
+      await YodyBalanceChanges.collection.insertMany(balanceChanges, {ordered: false})
     }
 
     await Transaction.create({
@@ -736,7 +736,7 @@ export default class TransactionService extends Service {
           }
         }
       ])
-      await QtumBalanceChanges.deleteMany({id})
+      await YodyBalanceChanges.deleteMany({id})
     }
   }
 

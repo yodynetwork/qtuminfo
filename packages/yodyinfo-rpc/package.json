@@ -1,7 +1,7 @@
 {
   "name": "qtuminfo-rpc",
   "version": "0.0.1",
-  "description": "Qtum Client Library to connect to Qtum Core via RPC",
+  "description": "Yody Client Library to connect to Yody Core via RPC",
   "main": "index.mjs",
   "keywords": [
     "qtum",

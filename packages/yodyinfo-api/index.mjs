@@ -13,7 +13,7 @@ import MiscController from './controllers/misc'
 import StatsController from './controllers/stats'
 import TransactionsController from './controllers/transactions'
 
-export default class QtuminfoAPIService extends Service {
+export default class YodyinfoAPIService extends Service {
   constructor(options) {
     super(options)
     this.rateLimiterOptions = options.rateLimiterOptions

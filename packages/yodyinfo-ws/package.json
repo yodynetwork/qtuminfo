@@ -1,7 +1,7 @@
 {
   "name": "qtuminfo-ws",
   "version": "0.0.1",
-  "description": "A QTUM blockchain REST and websocket API service for Qtuminfo Node",
+  "description": "A QTUM blockchain REST and websocket API service for Yodyinfo Node",
   "main": "index.js",
   "repository": "https://github.com/yodynetwork/qtuminfo/tree/master/packages/qtuminfo-rpc.git",
   "keywords": [

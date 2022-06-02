@@ -2,7 +2,7 @@ import {Address, Script, Solidity} from 'qtuminfo-lib'
 import Block from '../models/block'
 import Transaction from '../models/transaction'
 import TransactionOutput from '../models/transaction-output'
-import QtumBalanceChanges from '../models/qtum-balance-changes'
+import YodyBalanceChanges from '../models/qtum-balance-changes'
 import Service from './base'
 import {toBigInt} from '../utils'
 
@@ -105,8 +105,8 @@ export default class AddressService extends Service {
   ) {
     addresses = parseAddresses(addresses)
     let sort = reversed ? {'block.height': -1, index: -1} : {'block.height': 1, index: 1}
-    let count = await QtumBalanceChanges.countDocuments({address: {$in: addresses}})
-    let list = await QtumBalanceChanges.aggregate([
+    let count = await YodyBalanceChanges.countDocuments({address: {$in: addresses}})
+    let list = await YodyBalanceChanges.aggregate([
       {$match: {address: {$in: addresses}}},
       {$sort: sort},
       {$skip: pageIndex * pageSize},
@@ -146,7 +146,7 @@ export default class AddressService extends Service {
     if (reversed) {
       list = list.reverse()
     }
-    let [initialBalance] = await QtumBalanceChanges.aggregate([
+    let [initialBalance] = await YodyBalanceChanges.aggregate([
       {
         $match: {
           address: {$in: addresses},
@@ -191,7 +191,7 @@ export default class AddressService extends Service {
 
   async getAddressSummary(addresses) {
     addresses = parseAddresses(addresses)
-    let [balanceChangesResult] = await QtumBalanceChanges.aggregate([
+    let [balanceChangesResult] = await YodyBalanceChanges.aggregate([
       {$match: {address: {$in: addresses}}},
       {
         $group: {

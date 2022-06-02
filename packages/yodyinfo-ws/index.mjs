@@ -2,7 +2,7 @@ import WebSocket from 'ws'
 import {Transaction, Address} from 'qtuminfo-lib'
 import Service from 'qtuminfo-node/lib/services/base'
 
-export default class QtuminfoWebsocketService extends Service {
+export default class YodyinfoWebsocketService extends Service {
   constructor(options) {
     super(options)
     this._options = options

@@ -3,7 +3,7 @@ import Transaction from '../models/transaction'
 import TransactionOutput from '../models/transaction-output'
 import Service from './base'
 import {toBigInt} from '../utils'
-import QtumBalanceChanges from '../models/qtum-balance-changes'
+import YodyBalanceChanges from '../models/qtum-balance-changes'
 
 export default class MempoolService extends Service {
   constructor(options) {
@@ -92,7 +92,7 @@ export default class MempoolService extends Service {
         relatedAddresses.push(item.address)
       }
     }
-    await QtumBalanceChanges.insertMany(balanceChanges, {ordered: false})
+    await YodyBalanceChanges.insertMany(balanceChanges, {ordered: false})
 
     await Transaction.create({
       id: tx.id,

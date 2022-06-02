@@ -4,7 +4,7 @@ import {Address, Solidity} from 'qtuminfo-lib'
 import Contract from '../models/contract'
 import Transaction from '../models/transaction'
 import TransactionOutput from '../models/transaction-output'
-import QtumBalanceChanges from '../models/qtum-balance-changes'
+import YodyBalanceChanges from '../models/qtum-balance-changes'
 import QRC20TokenBalance from '../models/qrc20-token-balance'
 import Service from './base'
 import {toBigInt} from '../utils'
@@ -159,7 +159,7 @@ export default class ContractService extends Service {
       }
     }
 
-    let [balanceChangesResult] = await QtumBalanceChanges.aggregate([
+    let [balanceChangesResult] = await YodyBalanceChanges.aggregate([
       {
         $match: {
           address: {type: Address.CONTRACT, hex: address},

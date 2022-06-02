@@ -1,6 +1,6 @@
 import {Address} from 'qtuminfo-lib'
 import TransactionOutput from '../models/transaction-output'
-import QtumBalanceChanges from '../models/qtum-balance-changes'
+import YodyBalanceChanges from '../models/qtum-balance-changes'
 import AddressInfo from '../models/address-info'
 import Service from './base'
 import {toBigInt, BigInttoLong} from '../utils'
@@ -160,7 +160,7 @@ export default class BalanceService extends Service {
       return
     }
 
-    let balanceChanges = await QtumBalanceChanges.aggregate([
+    let balanceChanges = await YodyBalanceChanges.aggregate([
       {
         $match: {
           'block.height': block.height,
@@ -211,7 +211,7 @@ export default class BalanceService extends Service {
   async onReorg(height, hash) {
     await this._waitUntilProcessed()
     this._processing = true
-    let balanceChanges = await QtumBalanceChanges.aggregate([
+    let balanceChanges = await YodyBalanceChanges.aggregate([
       {
         $match: {
           'block.height': {$gt: height, $lt: 0xffffffff},
