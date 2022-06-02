@@ -1,0 +1,47 @@
+{
+    "chain": "mainnet",
+    "port": 3001,
+    "datadir": "/home/leo/Documents/yodyinfo/packages/explorer/data",
+    "services": [
+        "yodyinfo-api",
+        "yodyinfo-ws",
+        "address",
+        "balance",
+        "block",
+        "contract",
+        "db",
+        "header",
+        "mempool",
+        "p2p",
+        "transaction",
+        "web"
+    ],
+    "servicesConfig": {
+        "db": {
+        "mongodb": {
+            "url": "mongodb://localhost:27017/",
+            "database": "yodyinfo-mainnet"
+        },
+        "rpc": {
+            "protocol": "http",
+            "host": "localhost",
+            "port": 3889,
+            "user": "user",
+            "password": "password"
+        }
+        },
+        "p2p": {
+        "peers": [
+            {
+                "ip": {
+                    "v4": "127.0.0.1"
+                },
+                "port": 3888
+            }
+        ]
+        },
+        "yodyinfo-ws": {
+            "port": 3002
+        }
+    }
+}

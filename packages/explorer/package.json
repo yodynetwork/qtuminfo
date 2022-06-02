@@ -1,0 +1,12 @@
+{
+    "name": "explorer-mainnet",
+    "private": true,
+    "scripts": {
+        "start": "yodyinfo-node start"
+    },
+    "dependencies": {
+        "yodyinfo-api": "^0.0.1",
+        "yodyinfo-node": "^0.0.1",
+        "yodyinfo-ws": "^0.0.1"
+    }
+}
