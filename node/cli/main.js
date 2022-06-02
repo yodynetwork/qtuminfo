@@ -2,7 +2,7 @@ const path = require('path')
 const Liftoff = require('liftoff')
 const program = require('commander')
 const packageJson = require('../../package.json')
-const QtumNode = require('./node')
+const YodyNode = require('./node')
 
 process.on('unhandledRejection', reason => console.error(reason))
 
@@ -30,14 +30,14 @@ liftoff.launch({cwd: process.cwd}, () => {
   program
     .command('start')
     .description('Start the current node')
-    .option('-c, --config <dir>', 'Specify the directory with Qtuminfo Node configuration')
+    .option('-c, --config <dir>', 'Specify the directory with Yodyinfo Node configuration')
     .action(async cmd => {
       let config = require(path.resolve(
         process.cwd(),
         ...cmd.config ? [cmd.config] : [],
         'qtuminfo-node.json'
       ))
-      let node = new QtumNode({path: process.cwd(), config})
+      let node = new YodyNode({path: process.cwd(), config})
       await node.start()
     })
 
