@@ -50,7 +50,7 @@ This repo is optional, you may not deploy it if you don't need UI.
 1. `git clone https://github.com/yodynetwork/qtuminfo-ui.git`
 2. `cd qtuminfo-ui && npm install`
 3. Edit `package.json` for example:
-   * Edit `script.build` to `"build": "QTUMINFO_API_BASE_CLIENT=/api/ QTUMINFO_API_BASE_SERVER=http://localhost:3001/ QTUMINFO_API_BASE_WS=//example.com/ nuxt build"` in `package.json` to set the api URL base
+   * Edit `script.build` to `"build": "YODYINFO_API_BASE_CLIENT=/api/ YODYINFO_API_BASE_SERVER=http://localhost:3001/ YODYINFO_API_BASE_WS=//example.com/ nuxt build"` in `package.json` to set the api URL base
    * Edit `script.start` to `"start": "PORT=3000 nuxt start"` to run `qtuminfo-ui` on port 3000
 4. `npm run build`
 5. `npm start`
