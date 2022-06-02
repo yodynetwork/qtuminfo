@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qtumproject/qtuminfo.git"
+    "url": "git+https://github.com/yodynetwork/qtuminfo.git"
   },
   "keywords": [
     "qtum",
@@ -19,9 +19,9 @@
   "author": "QTUM <foundation@qtum.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/qtumproject/qtuminfo/issues"
+    "url": "https://github.com/yodynetwork/qtuminfo/issues"
   },
-  "homepage": "https://github.com/qtumproject/qtuminfo#readme",
+  "homepage": "https://github.com/yodynetwork/qtuminfo#readme",
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "eslint": "^4.19.1",

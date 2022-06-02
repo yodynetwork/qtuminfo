@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A QTUM blockchain REST and websocket API service for Qtuminfo Node",
   "main": "index.js",
-  "repository": "https://github.com/qtumproject/qtuminfo/tree/master/qtuminfo-api",
+  "repository": "https://github.com/yodynetwork/qtuminfo/tree/master/qtuminfo-api",
   "keywords": [
     "qtum",
     "qtuminfo"

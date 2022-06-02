@@ -5,12 +5,12 @@
 * mongodb v4.0+
 
 ## Deploy qtum core
-1. `git clone --recursive https://github.com/qtumproject/qtum.git --branch=qtuminfo`
-2. Follow the instructions [https://github.com/qtumproject/qtum#building-qtum-core]() to build qtum
+1. `git clone --recursive https://github.com/yodynetwork/qtum.git --branch=qtuminfo`
+2. Follow the instructions [https://github.com/yodynetwork/qtum#building-qtum-core]() to build qtum
 3. Run `qtumd` with `-logevents=1` enabled
 
 ## Deploy qtuminfo
-1. `git clone https://github.com/qtumproject/qtuminfo.git && cd qtuminfo`
+1. `git clone https://github.com/yodynetwork/qtuminfo.git && cd qtuminfo`
 2. `npm install`
 3. `mkdir packages/explorer` (you may change the directory name) and write files `package.json` and `qtuminfo-node.json` to it
     ```json
@@ -82,7 +82,7 @@
 5. run `npm start` in `packages/explorer` directory
 
 ## Deploy qtuminfo-ui
-1. `git clone https://github.com/qtumproject/qtuminfo.git && cd qtuminfo`
+1. `git clone https://github.com/yodynetwork/qtuminfo.git && cd qtuminfo`
 2. `npm install` \
     You may modify `package.json` as follows:
     * rewrite `script.build` to `"build": "QTUMINFO_API_BASE_CLIENT=/api/ QTUMINFO_API_BASE_SERVER=http://localhost:3001/qtuminfo-api/ QTUMINFO_API_BASE_WS=//example.com/ws/ nuxt build"` in `package.json` to set the api URL base

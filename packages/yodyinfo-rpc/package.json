@@ -7,7 +7,7 @@
     "qtum",
     "qtuminfo"
   ],
-  "repository": "https://github.com/qtumproject/qtuminfo/tree/master/packages/qtuminfo-rpc.git",
+  "repository": "https://github.com/yodynetwork/qtuminfo/tree/master/packages/qtuminfo-rpc.git",
   "author": "QTUM <foundation@qtum.org>",
   "license": "MIT"
 }
