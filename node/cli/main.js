@@ -7,10 +7,10 @@ const YodyNode = require('./node')
 process.on('unhandledRejection', reason => console.error(reason))
 
 let liftoff = new Liftoff({
-  name: 'qtuminfo',
-  moduleName: 'qtuminfo-node',
-  configName: 'qtuminfo-node',
-  processTitle: 'qtuminfo'
+  name: 'yodyinfo',
+  moduleName: 'yodyinfo-node',
+  configName: 'yodyinfo-node',
+  processTitle: 'yodyinfo'
 })
   .on('require', name => {
     console.log('Loading:', name)
@@ -35,7 +35,7 @@ liftoff.launch({cwd: process.cwd}, () => {
       let config = require(path.resolve(
         process.cwd(),
         ...cmd.config ? [cmd.config] : [],
-        'qtuminfo-node.json'
+        'yodyinfo-node.json'
       ))
       let node = new YodyNode({path: process.cwd(), config})
       await node.start()

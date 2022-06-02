@@ -1,9 +1,9 @@
-# How to Deploy qtuminfo
+# How to Deploy yodyinfo
 
-qtuminfo is splitted into 3 repos:
-* [https://github.com/yodynetwork/qtuminfo](https://github.com/yodynetwork/qtuminfo)
-* [https://github.com/yodynetwork/qtuminfo-api](https://github.com/yodynetwork/qtuminfo-api)
-* [https://github.com/yodynetwork/qtuminfo-ui](https://github.com/yodynetwork/qtuminfo-ui)
+yodyinfo is splitted into 3 repos:
+* [https://github.com/yodynetwork/yodyinfo](https://github.com/yodynetwork/yodyinfo)
+* [https://github.com/yodynetwork/yodyinfo-api](https://github.com/yodynetwork/yodyinfo-api)
+* [https://github.com/yodynetwork/yodyinfo-ui](https://github.com/yodynetwork/yodyinfo-ui)
 
 ## Prerequisites
 
@@ -11,23 +11,23 @@ qtuminfo is splitted into 3 repos:
 * mysql v8.0+
 * redis v5.0+
 
-## Deploy qtum core
-1. `git clone --recursive https://github.com/yodynetwork/qtum.git --branch=qtuminfo`
-2. Follow the instructions of [https://github.com/yodynetwork/qtum/blob/master/README.md#building-qtum-core](https://github.com/yodynetwork/qtum/blob/master/README.md#building-qtum-core) to build qtum
-3. Run `qtumd` with `-logevents=1` enabled
+## Deploy yody core
+1. `git clone --recursive https://github.com/yodynetwork/yody.git --branch=yodyinfo`
+2. Follow the instructions of [https://github.com/yodynetwork/yody/blob/master/README.md#building-yody-core](https://github.com/yodynetwork/yody/blob/master/README.md#building-yody-core) to build yody
+3. Run `yodyd` with `-logevents=1` enabled
 
-## Deploy qtuminfo
-1. `git clone https://github.com/yodynetwork/qtuminfo.git`
-2. `cd qtuminfo && npm install`
+## Deploy yodyinfo
+1. `git clone https://github.com/yodynetwork/yodyinfo.git`
+2. `cd yodyinfo && npm install`
 3. Create a mysql database and import [docs/structure.sql](structure.sql)
-4. Edit file `qtuminfo-node.json` and change the configurations if needed.
+4. Edit file `yodyinfo-node.json` and change the configurations if needed.
 5. `npm run dev`
 
-It is strongly recommended to run `qtuminfo` under a process manager (like `pm2`), to restart the process when `qtuminfo` crashes.
+It is strongly recommended to run `yodyinfo` under a process manager (like `pm2`), to restart the process when `yodyinfo` crashes.
 
-## Deploy qtuminfo-api
-1. `git clone https://github.com/yodynetwork/qtuminfo-api.git`
-2. `cd qtuminfo-api && npm install`
+## Deploy yodyinfo-api
+1. `git clone https://github.com/yodynetwork/yodyinfo-api.git`
+2. `cd yodyinfo-api && npm install`
 3. Create file `config/config.prod.js`, write your configurations into `config/config.prod.js` such as:
     ```javascript
     exports.security = {
@@ -45,12 +45,12 @@ It is strongly recommended to run `qtuminfo` under a process manager (like `pm2`
     This will override corresponding field in `config/config.default.js` while running.
 4. `npm start`
 
-## Deploy qtuminfo-ui
+## Deploy yodyinfo-ui
 This repo is optional, you may not deploy it if you don't need UI.
-1. `git clone https://github.com/yodynetwork/qtuminfo-ui.git`
-2. `cd qtuminfo-ui && npm install`
+1. `git clone https://github.com/yodynetwork/yodyinfo-ui.git`
+2. `cd yodyinfo-ui && npm install`
 3. Edit `package.json` for example:
    * Edit `script.build` to `"build": "YODYINFO_API_BASE_CLIENT=/api/ YODYINFO_API_BASE_SERVER=http://localhost:3001/ YODYINFO_API_BASE_WS=//example.com/ nuxt build"` in `package.json` to set the api URL base
-   * Edit `script.start` to `"start": "PORT=3000 nuxt start"` to run `qtuminfo-ui` on port 3000
+   * Edit `script.start` to `"start": "PORT=3000 nuxt start"` to run `yodyinfo-ui` on port 3000
 4. `npm run build`
 5. `npm start`

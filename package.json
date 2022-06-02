@@ -1,27 +1,27 @@
 {
-  "name": "qtuminfo",
+  "name": "yodyinfo",
   "private": true,
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "dev": "bin/qtuminfo-node.js start",
+    "dev": "bin/yodyinfo-node.js start",
     "lint": "eslint --ext .js . --ignore-path .gitignore"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yodynetwork/qtuminfo.git"
+    "url": "git+https://github.com/yodynetwork/yodyinfo.git"
   },
   "keywords": [
-    "qtum",
-    "qtuminfo",
-    "qtum explorer"
+    "yody",
+    "yodyinfo",
+    "yody explorer"
   ],
-  "author": "YODY <foundation@qtum.org>",
+  "author": "YODY <foundation@yody.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yodynetwork/qtuminfo/issues"
+    "url": "https://github.com/yodynetwork/yodyinfo/issues"
   },
-  "homepage": "https://github.com/yodynetwork/qtuminfo#readme",
+  "homepage": "https://github.com/yodynetwork/yodyinfo#readme",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.4.0"
