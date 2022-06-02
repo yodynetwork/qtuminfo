@@ -1,5 +1,5 @@
 # qtuminfo
 
-[API documentation](https://github.com/qtumproject/qtuminfo-api/blob/master/README.md)
+[API documentation](https://github.com/yodynetwork/qtuminfo-api/blob/master/README.md)
 
-[Deploy documentation](https://github.com/qtumproject/qtuminfo/blob/master/doc/deploy.md)
+[Deploy documentation](https://github.com/yodynetwork/qtuminfo/blob/master/doc/deploy.md)
